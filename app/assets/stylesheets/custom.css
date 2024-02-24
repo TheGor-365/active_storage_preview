@@ -1,3 +1,14 @@
 a {
   text-decoration: none !important;
 }
+
+.image {
+  margin-top: 25px;
+  width: 300px;
+  height: auto;
+}
+
+.image-container {
+  width: 300px;
+  height: 300px;
+}

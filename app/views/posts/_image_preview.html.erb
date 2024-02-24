@@ -1,0 +1,12 @@
+<div data-controller="previews">
+  <%= form.label :image, class: 'form-label' %>
+  <%= form.file_field :image, direct_upload: true, data: { previews_target: "input", action: "change->previews#preview" }, class: 'form-control border-secondary' %>
+
+  <div class="image">
+    <% if post.image.attached? %>
+      <%= image_tag post.image, data: { previews_target: "preview" }, class: "image shadow-sm rounded" %>
+    <% else %>
+      <%= image_tag "", data: { previews_target: "preview" }, class: "image shadow-sm rounded" %>
+    <% end %>
+  </div>
+</div>
